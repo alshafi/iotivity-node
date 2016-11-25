@@ -79,6 +79,13 @@ NAN_METHOD(bind_OCGetResourceHandle) {
       OCGetResourceHandle((uint8_t)(Nan::To<uint32_t>(info[0]).FromJust())));
 }
 
+NAN_METHOD(bind_OCGetResourceHandleAtUri) {
+  VALIDATE_ARGUMENT_COUNT(info, 1);
+  VALIDATE_ARGUMENT_TYPE(info, 0, IsString);
+  RETURN_RESOURCE_HANDLE(
+      OCGetResourceHandleAtUri((const char *)*String::Utf8Value(info[0])));
+}
+
 #define RESOURCE_BY_INDEX_ACCESSOR_BOILERPLATE()             \
   VALIDATE_ARGUMENT_COUNT(info, 2);                          \
   VALIDATE_ARGUMENT_TYPE(info, 0, IsObject);                 \
