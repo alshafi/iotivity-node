@@ -24,6 +24,11 @@ var preamblePath = path.join( packageRoot, "tests", "preamble" );
 var location = grunt.option( "ci" ) ?
 		path.join( packageRoot, "node_modules", "iotivity-node" ) : packageRoot;
 var plain = {
+	lineFilter: function( line, childPath ) {
+		grunt.verbose.write(
+			( childPath.match( /tests[/](.*)$/ ) || [] )[ 1 ] + ": " + line + "\n" );
+		return line.match( /^{/ ) ? line : "";
+	},
 	location: location,
 	spawn: function( interpreter, commandLine ) {
 		require( preamblePath ).apply( this, commandLine );
