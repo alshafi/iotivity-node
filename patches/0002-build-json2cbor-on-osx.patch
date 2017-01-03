@@ -14,7 +14,7 @@ index 3a5c94f..46fa324 100644
 --- a/resource/csdk/security/tool/SConscript
 +++ b/resource/csdk/security/tool/SConscript
 @@ -54,6 +54,9 @@ if target_os in ['msys_nt', 'windows']:
-     tools_env.AppendUnique(LIBS = ['ws2_32', 'bcrypt', 'iphlpapi',
+     tools_env.AppendUnique(LIBS = ['ws2_32', 'bcrypt', 'iphlpapi', 'crypt32',
                                     'coap', 'tinydtls', 'mbedtls', 'mbedx509', 'mbedcrypto',
                                     'octbstack_static', 'ocsrm', 'connectivity_abstraction'])
 +elif target_os in ['darwin']:

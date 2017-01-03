@@ -29,7 +29,7 @@ index 871e7a9..3a5c94f 100644
 +
 +if target_os in ['msys_nt', 'windows']:
 +    # octbstack.dll doesn't export all the functions called by this app, so use static LIBs instead.
-+    tools_env.AppendUnique(LIBS = ['ws2_32', 'bcrypt', 'iphlpapi',
++    tools_env.AppendUnique(LIBS = ['ws2_32', 'bcrypt', 'iphlpapi', 'crypt32',
 +                                   'coap', 'tinydtls', 'mbedtls', 'mbedx509', 'mbedcrypto',
 +                                   'octbstack_static', 'ocsrm', 'connectivity_abstraction'])
 +else:
