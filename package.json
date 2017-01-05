@@ -1,6 +1,6 @@
 {
   "name": "iotivity-node",
-  "version": "1.2.2-pre-514ef82fb2ec9865a792b5f252ffbaeed3a3e7eb-0",
+  "version": "1.2.2-pre-1.2-rel-0",
   "description": "IoTivity bindings",
   "repository": "https://github.com/otcshare/iotivity-node/",
   "license": "Apache-2.0",

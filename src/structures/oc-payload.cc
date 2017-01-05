@@ -18,8 +18,6 @@
 #include <nan.h>
 #include "../common.h"
 #include "handles.h"
-#include "oc-device-info.h"
-#include "oc-platform-info.h"
 
 extern "C" {
 #include <ocpayload.h>
