@@ -54,7 +54,6 @@ shelljs.mv( path.join( repoPaths.root, "octbstack.dll" ), addonAbsolutePath );
 shelljs.rm( "-rf",
 	path.join( repoPaths.root, "binding.gyp" ),
 	path.join( repoPaths.root, ".gitattributes" ),
-	path.join( repoPaths.root, "node_modules", "nan" ),
 	path.join( repoPaths.root, "node_modules", ".bin" ),
 	path.join( repoPaths.root, "build-scripts", "build-csdk.js" ),
 	path.join( repoPaths.root, "build-scripts", "generate-constants.js" ),
